@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+                  Background-image: url(P.jpeg);
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .yes-button {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        .yes-button:hover {
+            background-color: #45a049;
+        }
+        .no-button {
+            background-color: #f44336;
+            color: #fff;
+            position: absolute;
+        }
+        .no-button:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Are You a Gay?</h1>
+        <div class="buttons">
+            <button class="yes-button"><a href="PR.html">Yes</a></button>
+            <button class="no-button">No</button>
+        </div>
+    </div>
+    <script>
+        const noButton = document.querySelector('.no-button');
+
+        noButton.addEventListener('mouseover', () => {
+            const randomX = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        });
+
+        noButton.addEventListener('click', () => {
+            alert('You caught me! But no means NO!');
+        });
+    </script>
+</body>
+</html>
